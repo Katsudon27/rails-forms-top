@@ -1,9 +1,31 @@
-<%= form_with model: @user do |form| %>
-    <%= form.label :username, "Enter your username here" %>
-    <%= form.text_field :username %><br><br>
-    <%= form.label :email, "Enter your email here" %>
-    <%= form.email_field :email, placeholder: "example@example.com" %><br><br>
-    <%= form.label :password, "Enter your password here" %>
-    <%= form.password_field :password %><br><br>
-    <%= form.submit "Edit" %>
-<% end %>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+    </head>
+    <body>
+        <% if @user.errors.any? %>
+            <div id="error_explanation">
+                <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+                <ul>
+                    <% @user.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                    <% end %>
+                </ul>
+            </div>
+        <% end %>
+
+        <%= form_with model: @user do |form| %>
+            <%= form.label :username, "Enter your username here" %>
+            <%= form.text_field :username %><br>
+            <%= form.label :email, "Enter your email here" %>
+            <%= form.email_field :email, placeholder: "example@example.com" %><br>
+            <%= form.label :password, "Enter your password here" %>
+            <%= form.password_field :password %><br>
+            <%= form.submit "Edit" %>
+        <% end %>
+    </body>
+</html>

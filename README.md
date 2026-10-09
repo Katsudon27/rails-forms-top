@@ -1,24 +1,8 @@
-# README
+# Project: Forms
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a project completed as part of The Odin Project's Ruby on Rails course. The main objective is to practice building forms with Rails' built-in form helpers and would demonstrate the following skills/concepts:
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Usage of Rails' form helpers to create forms such as `#form_with`, labels and parameters
+- Routes and controller actions for create and update
+- Passing of data from form submission via the params hash into the corresponding controller hash
+- Displaying error messages from server-side validation via the built-in `#errors` and `#full_messages` methods
